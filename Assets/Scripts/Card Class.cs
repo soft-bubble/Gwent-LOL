@@ -14,6 +14,8 @@ public class CardClass : MonoBehaviour
     public string Line; // Which line does it plays between M/R/A
     public bool GrowthAffected; // If its under the influence of a Growth card
     public bool ClimateAffected; // If its under the influence of a Climate card
-    public bool AlreadyDrewIt = false; 
+    public bool SkillAffected; // If its under the influence of some card skill
+    public bool AlreadyDrewIt = false; // If it has already been taken from the deck
+    public bool Added; // If it has been added to the resultant power
 
 }
