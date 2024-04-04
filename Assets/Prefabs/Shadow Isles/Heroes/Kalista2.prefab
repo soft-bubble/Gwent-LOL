@@ -90,11 +90,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Kalista
   Initial_Power: 4
-  Altered_Power: 
+  Altered_Power: 0
   Skill: 
   Faction: Shadow Isles
-  IsLeader: 
   Medal: Plata
   Line: Distancia/Asedio (A/R)
-  GrowthAffected: 
-  ClimateAffected: 
+  NumericLine: 0
+  GrowthAffected: 0
+  ClimateAffected: 0
+  SkillAffected: 0
+  AlreadyDrewIt: 0
+  Added: 0

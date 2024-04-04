@@ -12,6 +12,7 @@ public class CardClass : MonoBehaviour
     public string Faction; //Faction in which it fights
     public string Medal; // Whether its a gold hero or a silver hero
     public string Line; // Which line does it plays between M/R/A
+    public int NumericLine; // Which line does it plays, not to show but to decide
     public bool GrowthAffected; // If its under the influence of a Growth card
     public bool ClimateAffected; // If its under the influence of a Climate card
     public bool SkillAffected; // If its under the influence of some card skill
