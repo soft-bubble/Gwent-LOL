@@ -17,6 +17,7 @@ public class CardClass : MonoBehaviour
     public bool ClimateAffected; // If its under the influence of a Climate card
     public bool SkillAffected; // If its under the influence of some card skill
     public bool AlreadyDrewIt = false; // If it has already been taken from the deck
+    public bool IsOnField = false; // If it has already been played 
     public bool Added; // If it has been added to the resultant power
 
 }

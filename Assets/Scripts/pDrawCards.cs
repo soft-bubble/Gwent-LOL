@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
-using Unity.Collections;
+using System.Runtime.CompilerServices;
+using JetBrains.Annotations;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class DrawCards : MonoBehaviour
 {
@@ -36,85 +36,72 @@ public class DrawCards : MonoBehaviour
     public GameObject Card27;
 
     public GameObject PlayerHand;
+    public bool firstdraw = false;
+    public bool seconddraw = false;
+    public bool thirddraw = false; 
+    public int Round = 1; 
+    private int position = 0;
+    //private bool Turn;
+    public List <GameObject> pDeck = new List<GameObject>();
 
-    List<GameObject> pDeck; 
+    public void CheckCards() 
+{
+    bool cardDealt = false;
 
-    void Start()
+    do
     {
-        
+        if (pDeck.Count > 0)
         {
-           pDeck.Add(Card1);
-           pDeck.Add(Card2);
-           pDeck.Add(Card3);
-           pDeck.Add(Card4);
-           pDeck.Add(Card5);
-           pDeck.Add(Card6);
-           pDeck.Add(Card7);
-           pDeck.Add(Card8);
-           pDeck.Add(Card9);
-           pDeck.Add(Card10);
-           pDeck.Add(Card11);
-           pDeck.Add(Card12);
-           pDeck.Add(Card13);
-           pDeck.Add(Card14);
-           pDeck.Add(Card15);
-           pDeck.Add(Card16);
-           pDeck.Add(Card17);
-           pDeck.Add(Card18);
-           pDeck.Add(Card19);
-           pDeck.Add(Card20);
-           pDeck.Add(Card21);
-           pDeck.Add(Card22);
-           pDeck.Add(Card23);
-           pDeck.Add(Card24);
-           pDeck.Add(Card25);
-           pDeck.Add(Card26);
-           pDeck.Add(Card27);
+            position = Random.Range(0, pDeck.Count);
+            if (position >= 0 && position < pDeck.Count)
+            {
+                if (pDeck[position].GetComponent<CardClass>().AlreadyDrewIt == false)
+                {
+                    GameObject card = Instantiate(pDeck[position], new UnityEngine.Vector2(0,0), UnityEngine.Quaternion.identity);
+                    card.transform.SetParent(PlayerHand.transform, false);
+                    pDeck[position].GetComponent<CardClass>().AlreadyDrewIt = true;
+                    cardDealt = true;
+                }
+            }
         }
-
-        // Shuffle the deck
-
-    }
-
-   
+    } while (!cardDealt);
 }
-    
-   /* public  List<GameObject> pDeck = new List<GameObject>();
 
-    void Start()
+   public void OnClick()
+{
+    //if (!Turn) return;
+
+    if (firstdraw == false)
     {
-       pDeck.Add(Card1);
-       pDeck.Add(Card2);
-       pDeck.Add(Card3);
-       pDeck.Add(Card4);
-       pDeck.Add(Card5);
-       pDeck.Add(Card6);
-       pDeck.Add(Card7);
-       pDeck.Add(Card8);
-       pDeck.Add(Card9);
-       pDeck.Add(Card10);
-       pDeck.Add(Card11);
-       pDeck.Add(Card12);
-       pDeck.Add(Card13);
-       pDeck.Add(Card14);
-       pDeck.Add(Card15);
-       pDeck.Add(Card16);
-       pDeck.Add(Card17);
-       pDeck.Add(Card18);
-       pDeck.Add(Card19);
-       pDeck.Add(Card20);
-       pDeck.Add(Card21);
-       pDeck.Add(Card22);
-       pDeck.Add(Card23);
-       pDeck.Add(Card24);
-       pDeck.Add(Card25);
-       pDeck.Add(Card26);
-       pDeck.Add(Card27);
-
-       
+        pDrawCards(10);
+        firstdraw = true;
     }
-    
-    void Update()
+
+    if (seconddraw == false && Round == 2)
     {
-        
-    }*/
+        pDrawCards(2);
+        seconddraw = true;
+    }
+
+    if (thirddraw == false && Round == 3)
+    {
+        pDrawCards(2);
+        thirddraw = true;
+    }
+}
+
+   private void pDrawCards(int numberOfDraws)
+{
+    for (int i = 0; i < numberOfDraws; i++)
+    {
+        CheckCards();
+    }
+}
+
+   void Update()
+    {
+        //Round = GameObject.Find("GameManager").GetComponent<GameManager>().Round;
+        //Turn = GameObject.Find("TurnCounter").GetComponent<SetTurn>().Shift;
+    }
+
+}
