@@ -641,7 +641,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8256499510097957819, guid: cb51f0a50af0aa74a8c60eec35327982, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4120454193538100474}
   m_SourcePrefab: {fileID: 100100000, guid: cb51f0a50af0aa74a8c60eec35327982, type: 3}
 --- !u!1001 &485947195302920553
 PrefabInstance:
@@ -785,6 +788,10 @@ MonoBehaviour:
   Card26: {fileID: 7043672927468805659, guid: e91e167729a62894a9807d735fef0499, type: 3}
   Card27: {fileID: 57879479966342097, guid: ce17009da1b9e9645b4744b9bf5684e4, type: 3}
   EnemyHand: {fileID: 27810652}
+  firstdraw: 0
+  seconddraw: 0
+  thirddraw: 0
+  Round: 1
   eDeck: []
 --- !u!1001 &1610174368070672907
 PrefabInstance:
@@ -1396,7 +1403,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5847608695423334641, guid: 564545e56b9cd6a4dac9c16e95cd894a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7928487155454882896}
   m_SourcePrefab: {fileID: 100100000, guid: 564545e56b9cd6a4dac9c16e95cd894a, type: 3}
 --- !u!1001 &3131271926154193766
 PrefabInstance:
@@ -1602,6 +1612,21 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3211160114123691292, guid: cb51f0a50af0aa74a8c60eec35327982, type: 3}
   m_PrefabInstance: {fileID: 377557137934284858}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4120454193538100474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2620992458847555637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e41c073b0726f49ab0e5b8f12159f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardsatFrange: []
+  Cards: 0
+  Surrender: 0
 --- !u!1001 &4196399840964636109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2337,6 +2362,21 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 343022227143463804, guid: 564545e56b9cd6a4dac9c16e95cd894a, type: 3}
   m_PrefabInstance: {fileID: 2965945112294357233}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7928487155454882896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27810652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e41c073b0726f49ab0e5b8f12159f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardsatFrange: []
+  Cards: 0
+  Surrender: 0
 --- !u!1001 &8009647741726172869
 PrefabInstance:
   m_ObjectHideFlags: 0

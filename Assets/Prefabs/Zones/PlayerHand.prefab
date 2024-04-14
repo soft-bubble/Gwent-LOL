@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7650227043786594435}
   - component: {fileID: 2155539036678501313}
   - component: {fileID: 7362177032593342919}
+  - component: {fileID: 1760531905899547048}
   m_Layer: 7
   m_Name: PlayerHand
   m_TagString: Untagged
@@ -100,3 +101,18 @@ MonoBehaviour:
   m_Spacing: {x: 10, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 1
+--- !u!114 &1760531905899547048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8256499510097957819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e41c073b0726f49ab0e5b8f12159f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardsatFrange: []
+  Cards: 0
+  Surrender: 0
