@@ -41,7 +41,7 @@ public class eDrawCards : MonoBehaviour
     private int position = 0;
     public  List<GameObject> eDeck = new List<GameObject>();
 
-    public void CheckCards() 
+    public void CheckCards() /*Method to shuffle the cards, it checks if it was already dealt and excludes them*/
     {
         bool cardDealt = false;
 
@@ -88,7 +88,7 @@ public class eDrawCards : MonoBehaviour
         }
     }
 
-    public void DrawCards(int numberOfDraws)
+    public void DrawCards(int numberOfDraws) /*Method to call the CheckCards method*/
     {
         for (int i = 0; i < numberOfDraws; i++)
         {
@@ -96,7 +96,7 @@ public class eDrawCards : MonoBehaviour
             CheckCards();
         }
     }
-    void Start()
+    void Start() /*Makes sure the cards are into the list when the game starts*/
     {
     eDeck.Add(Card1);
     eDeck.Add(Card3);
