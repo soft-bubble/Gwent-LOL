@@ -9,7 +9,7 @@ public class HandClass : MonoBehaviour
      public int Cards = 0;
      public bool Surrender = false;
 
-     private void OnCollisionEnter2D(Collision2D collision) //cuando colisionan mete las cartas en la lista de la franja 
+     private void OnCollisionEnter2D(Collision2D collision) // adds the cards to the list frange
      {
         CardEntry = collision.gameObject;
         if (!CardsatFrange.Contains(CardEntry))
@@ -19,7 +19,7 @@ public class HandClass : MonoBehaviour
         }
      }
 
-    private void OnCollisionExit2D(Collision2D collision) // las saca de la lista 
+    private void OnCollisionExit2D(Collision2D collision) // takes them out
      {
         if (CardsatFrange.Contains(CardEntry))
         {
