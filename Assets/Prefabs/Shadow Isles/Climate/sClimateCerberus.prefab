@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 744824224948161613}
   - component: {fileID: 8536021211704988383}
   - component: {fileID: 5557489158407192956}
+  - component: {fileID: 5262665294776583784}
   m_Layer: 6
   m_Name: sClimateCerberus
   m_TagString: Untagged
@@ -75,3 +76,29 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5262665294776583784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8383108593151514769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d99057cf30cf14bbbe74625b314835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Initial_Power: 0
+  Altered_Power: 0
+  Skill: 
+  Faction: 
+  Medal: 
+  Line: 
+  NumericLine: 0
+  GrowthAffected: 0
+  ClimateAffected: 0
+  SkillAffected: 0
+  AlreadyDrewIt: 0
+  IsOnField: 0
+  Added: 0

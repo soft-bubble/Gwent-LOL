@@ -52,7 +52,7 @@ public class eDrawCards : MonoBehaviour
                 position = Random.Range(0, eDeck.Count);
                 if (position >= 0 && position < eDeck.Count)
                 {
-                    if (eDeck[position].GetComponent<CardClass>().AlreadyDrewIt == false)
+                    if (eDeck[position]!= null && eDeck[position].GetComponent<CardClass>().AlreadyDrewIt == false)
                     {
                         GameObject card = Instantiate(eDeck[position], new UnityEngine.Vector2(0,0), UnityEngine.Quaternion.identity);
                         card.transform.SetParent(EnemyHand.transform, false);
@@ -60,6 +60,9 @@ public class eDrawCards : MonoBehaviour
                         cardDealt = true;
                     }
                 }
+            }
+            else{
+                break;
             }
         } while (!cardDealt);
     }
@@ -89,10 +92,39 @@ public class eDrawCards : MonoBehaviour
     {
         for (int i = 0; i < numberOfDraws; i++)
         {
+            if (eDeck.Count > 0)
             CheckCards();
         }
     }
-
+    void Start()
+    {
+    eDeck.Add(Card1);
+    eDeck.Add(Card3);
+    eDeck.Add(Card4);
+    eDeck.Add(Card5);
+    eDeck.Add(Card6);
+    eDeck.Add(Card7);
+    eDeck.Add(Card8);
+    eDeck.Add(Card9);
+    eDeck.Add(Card10);
+    eDeck.Add(Card11);
+    eDeck.Add(Card12);
+    eDeck.Add(Card13);
+    eDeck.Add(Card14);
+    eDeck.Add(Card15);
+    eDeck.Add(Card16);
+    eDeck.Add(Card17);
+    eDeck.Add(Card18);
+    eDeck.Add(Card19);
+    eDeck.Add(Card20);
+    eDeck.Add(Card21);
+    eDeck.Add(Card22);
+    eDeck.Add(Card23);
+    eDeck.Add(Card24);
+    eDeck.Add(Card25);
+    eDeck.Add(Card26);
+    eDeck.Add(Card27);
+    }
     void Update()
     {
         //Round = GameObject.Find("GameManager").GetComponent<GameManager>().Round;
