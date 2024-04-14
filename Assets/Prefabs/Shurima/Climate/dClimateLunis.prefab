@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5858337250800919076}
   - component: {fileID: 5574823697264350022}
   - component: {fileID: 491106299038137391}
+  - component: {fileID: 4945416938156268476}
   m_Layer: 6
   m_Name: dClimateLunis
   m_TagString: Untagged
@@ -75,3 +76,31 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4945416938156268476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730348459301346629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d99057cf30cf14bbbe74625b314835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Lunis
+  Initial_Power: 0
+  Altered_Power: 0
+  Skill: "La fr\xEDa luz lunar azota las l\xEDneas distantes. Lunis atacar\xE1 una
+    de ellas, y esta perder\xE1 un punto por carta en dicha l\xEDnea. El equipo propio
+    adquiere un punto de bonificaci\xF3n, por la gloria de Lunis."
+  Faction: Shurima
+  Medal: 
+  Line: 'R/A '
+  NumericLine: 0
+  GrowthAffected: 0
+  ClimateAffected: 0
+  SkillAffected: 0
+  AlreadyDrewIt: 0
+  IsOnField: 0
+  Added: 0

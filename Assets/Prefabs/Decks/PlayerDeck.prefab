@@ -12,9 +12,7 @@ GameObject:
   - component: {fileID: 4011831572028183409}
   - component: {fileID: 636964265758935284}
   - component: {fileID: 3156456566050408150}
-  - component: {fileID: 7106307841347134283}
-  - component: {fileID: 1458031591572266953}
-  - component: {fileID: 1824780262119119204}
+  - component: {fileID: -6034025963124256691}
   m_Layer: 5
   m_Name: PlayerDeck
   m_TagString: Untagged
@@ -124,8 +122,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1824780262119119204}
-        m_TargetAssemblyTypeName: pDrawCardsTester1, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: pDrawCArds, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -136,14 +134,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7106307841347134283
+--- !u!114 &-6034025963124256691
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2798537096219756524}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9542a665187301b4e90a967f35a64d1b, type: 3}
   m_Name: 
@@ -163,47 +161,24 @@ MonoBehaviour:
   Card13: {fileID: 9033113300524686119, guid: ed6dd42cac3eb4649b4e8f9a0b74dc1c, type: 3}
   Card14: {fileID: 4876573101154567080, guid: c70eedd3c5e50a5458040ef78350b721, type: 3}
   Card15: {fileID: 6754948737034089560, guid: e1b06e7220cdb5c49aea7df87ac9ef77, type: 3}
-  Card16: {fileID: 3730348459301346629, guid: 0f542c7dcda8bd84383bf38881a4fb99, type: 3}
-  Card17: {fileID: 9198732332358552149, guid: 8e8931891d7e8eb4998c0e877fc6c3f0, type: 3}
-  Card18: {fileID: 371251143624670887, guid: 78eb0c34b61d38540a68604c3c7d65fc, type: 3}
-  Card19: {fileID: 8175539330316772702, guid: 49f72e116d38c744d9b3a1553d68f1ad, type: 3}
-  Card20: {fileID: 1467533810147429382, guid: abcb725a73e14d944b4883666e4a91fe, type: 3}
-  Card21: {fileID: 3359392865734334511, guid: 67cc2524426e54b46b2103d4a0014cee, type: 3}
-  Card22: {fileID: 1195103864205173180, guid: cb5e452353cd3204aa4ba0c73896886f, type: 3}
-  Card23: {fileID: 4223009641935184289, guid: 00a3fd3da5adf754ab6503c6e3280847, type: 3}
-  Card24: {fileID: 7910630099581468306, guid: 4320a2e243da1e045b67e37f01b413a6, type: 3}
-  Card25: {fileID: 5898436023155918658, guid: ca0126b40911e114fbf6dfafbfe2b7f3, type: 3}
-  Card26: {fileID: 7043672927468805659, guid: e91e167729a62894a9807d735fef0499, type: 3}
-  Card27: {fileID: 57879479966342097, guid: ce17009da1b9e9645b4744b9bf5684e4, type: 3}
-  PlayerHand: {fileID: 2798537096219756524}
+  Card16: {fileID: 7910630099581468306, guid: 4320a2e243da1e045b67e37f01b413a6, type: 3}
+  Card17: {fileID: 5898436023155918658, guid: ca0126b40911e114fbf6dfafbfe2b7f3, type: 3}
+  Card18: {fileID: 1195103864205173180, guid: cb5e452353cd3204aa4ba0c73896886f, type: 3}
+  Card19: {fileID: 4223009641935184289, guid: 00a3fd3da5adf754ab6503c6e3280847, type: 3}
+  Card20: {fileID: 9198732332358552149, guid: 8e8931891d7e8eb4998c0e877fc6c3f0, type: 3}
+  Card21: {fileID: 371251143624670887, guid: 78eb0c34b61d38540a68604c3c7d65fc, type: 3}
+  Card22: {fileID: 8175539330316772702, guid: 49f72e116d38c744d9b3a1553d68f1ad, type: 3}
+  Card23: {fileID: 1467533810147429382, guid: abcb725a73e14d944b4883666e4a91fe, type: 3}
+  Card24: {fileID: 3359392865734334511, guid: 67cc2524426e54b46b2103d4a0014cee, type: 3}
+  Card25: {fileID: 7043672927468805659, guid: e91e167729a62894a9807d735fef0499, type: 3}
+  Card26: {fileID: 57879479966342097, guid: ce17009da1b9e9645b4744b9bf5684e4, type: 3}
+  Card27: {fileID: 3730348459301346629, guid: 0f542c7dcda8bd84383bf38881a4fb99, type: 3}
+  PlayerHand: {fileID: 0}
+  firstdraw: 0
+  seconddraw: 0
+  thirddraw: 0
+  Round: 1
   pDeck: []
---- !u!114 &1458031591572266953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2798537096219756524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
---- !u!114 &1824780262119119204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2798537096219756524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71e9592e82b9d45439e77367ae3b1bdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Card1: {fileID: 7147845019172335120, guid: 6062a94c16435c04e9b5bb4c80e24301, type: 3}
-  PlayerHand: {fileID: 8256499510097957819, guid: cb51f0a50af0aa74a8c60eec35327982, type: 3}
 --- !u!1 &5735080476942012960
 GameObject:
   m_ObjectHideFlags: 0

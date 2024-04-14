@@ -1,11 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
-using System.Runtime.CompilerServices;
-using JetBrains.Annotations;
 using UnityEngine;
 
-public class DrawCards : MonoBehaviour
+public class pDrawCards : MonoBehaviour
 {
     public GameObject Card1;
     public GameObject Card2;
@@ -41,7 +38,7 @@ public class DrawCards : MonoBehaviour
     public bool thirddraw = false; 
     public int Round = 1; 
     private int position = 0;
-    //private bool Turn;
+    // private bool Turn;
     public List <GameObject> pDeck = new List<GameObject>();
 
     public void CheckCards() 
@@ -55,7 +52,7 @@ public class DrawCards : MonoBehaviour
             position = Random.Range(0, pDeck.Count);
             if (position >= 0 && position < pDeck.Count)
             {
-                if (pDeck[position].GetComponent<CardClass>().AlreadyDrewIt == false)
+                if (pDeck[position]!= null && pDeck[position].GetComponent<CardClass>().AlreadyDrewIt == false)
                 {
                     GameObject card = Instantiate(pDeck[position], new UnityEngine.Vector2(0,0), UnityEngine.Quaternion.identity);
                     card.transform.SetParent(PlayerHand.transform, false);
@@ -64,44 +61,76 @@ public class DrawCards : MonoBehaviour
                 }
             }
         }
+        else{
+            break;
+        }
     } while (!cardDealt);
 }
 
    public void OnClick()
 {
-    //if (!Turn) return;
+    //  if (!Turn) return;
 
     if (firstdraw == false)
     {
-        pDrawCards(10);
+        DrawCards(10);
         firstdraw = true;
     }
 
     if (seconddraw == false && Round == 2)
     {
-        pDrawCards(2);
+        DrawCards(2);
         seconddraw = true;
     }
 
     if (thirddraw == false && Round == 3)
     {
-        pDrawCards(2);
+        DrawCards(2);
         thirddraw = true;
     }
 }
 
-   private void pDrawCards(int numberOfDraws)
+   public void DrawCards(int numberOfDraws)
 {
     for (int i = 0; i < numberOfDraws; i++)
-    {
+    { 
+        if (pDeck.Count > 0)
         CheckCards();
     }
 }
+  void Start()
+{
+    pDeck.Add(Card1);
+    pDeck.Add(Card3);
+    pDeck.Add(Card4);
+    pDeck.Add(Card5);
+    pDeck.Add(Card6);
+    pDeck.Add(Card7);
+    pDeck.Add(Card8);
+    pDeck.Add(Card9);
+    pDeck.Add(Card10);
+    pDeck.Add(Card11);
+    pDeck.Add(Card12);
+    pDeck.Add(Card13);
+    pDeck.Add(Card14);
+    pDeck.Add(Card15);
+    pDeck.Add(Card16);
+    pDeck.Add(Card17);
+    pDeck.Add(Card18);
+    pDeck.Add(Card19);
+    pDeck.Add(Card20);
+    pDeck.Add(Card21);
+    pDeck.Add(Card22);
+    pDeck.Add(Card23);
+    pDeck.Add(Card24);
+    pDeck.Add(Card25);
+    pDeck.Add(Card26);
+    pDeck.Add(Card27);
 
+}
    void Update()
     {
         //Round = GameObject.Find("GameManager").GetComponent<GameManager>().Round;
         //Turn = GameObject.Find("TurnCounter").GetComponent<SetTurn>().Shift;
     }
-
 }
