@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FringeClass : MonoBehaviour
 {
@@ -9,14 +10,13 @@ public class FringeClass : MonoBehaviour
     public int Cards = 0;
     public int Sum = 0;
 
-    // public Text puntuationText;
+    public Text puntuationText;
     public string Faction;
     public int Fringe;
     public GameObject ShurimaGrave;
     public GameObject ShadowIslesGrave;
     public GameObject PlayerHand;
     public GameObject EnemyHand;
-    public GameObject MeleeFringe;
 
     private int CheckRound = 1;
     private int Round = 1;
