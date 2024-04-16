@@ -40,10 +40,10 @@ public class FringeClass : MonoBehaviour
         EnemyHand = GameObject.Find("EnemyHand");
         Cards = CardsinFringe.Count;
         PMP = GameObject.FindGameObjectWithTag("PlayerMelee").GetComponent<FringeClass>();  // find all fringes
-        PRP = GameObject.FindGameObjectWithTag("PlayerDistance").GetComponent<FringeClass>(); 
+        PRP = GameObject.FindGameObjectWithTag("PlayerRange").GetComponent<FringeClass>(); 
         PAP = GameObject.FindGameObjectWithTag("PlayerSiege").GetComponent<FringeClass>(); 
         EMP = GameObject.FindGameObjectWithTag("EnemyMelee").GetComponent<FringeClass>(); 
-        ERP = GameObject.FindGameObjectWithTag("EnemyDistance").GetComponent<FringeClass>(); 
+        ERP = GameObject.FindGameObjectWithTag("EnemyRange").GetComponent<FringeClass>(); 
         EAP = GameObject.FindGameObjectWithTag("EnemySiege").GetComponent<FringeClass>();  
 
 

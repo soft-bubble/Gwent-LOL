@@ -2397,7 +2397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2888207857614343245, guid: c9db8e8b06d315a4c8ecc8441079d232, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 45.1229
+      value: 45.123
       objectReference: {fileID: 0}
     - target: {fileID: 2888207857614343245, guid: c9db8e8b06d315a4c8ecc8441079d232, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2433,7 +2433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2888207857614343245, guid: c9db8e8b06d315a4c8ecc8441079d232, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -118.6309
+      value: -118.63
       objectReference: {fileID: 0}
     - target: {fileID: 2888207857614343245, guid: c9db8e8b06d315a4c8ecc8441079d232, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3194,8 +3194,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e41c073b0726f49ab0e5b8f12159f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardsatFrange: []
+  CardsatFringe: []
   Cards: 0
+  CardsSentBack: 0
   Surrender: 0
 --- !u!1001 &4196399840964636109
 PrefabInstance:
@@ -3644,7 +3645,7 @@ PrefabInstance:
       objectReference: {fileID: 1447546774}
     - target: {fileID: 6668463270733179372, guid: 03579684e806a1d4c9436efe625a8697, type: 3}
       propertyPath: m_Name
-      value: PlayerDistance
+      value: PlayerRange
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4028,8 +4029,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e41c073b0726f49ab0e5b8f12159f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardsatFrange: []
+  CardsatFringe: []
   Cards: 0
+  CardsSentBack: 0
   Surrender: 0
 --- !u!1001 &8009647741726172869
 PrefabInstance:
@@ -4219,7 +4221,7 @@ PrefabInstance:
       objectReference: {fileID: 1447546774}
     - target: {fileID: 8319695944798740509, guid: 5efe641af6eb81a49bb6c697e8b94d76, type: 3}
       propertyPath: m_Name
-      value: EnemyDistance
+      value: EnemyRange
       objectReference: {fileID: 0}
     - target: {fileID: 8401104977226657867, guid: 5efe641af6eb81a49bb6c697e8b94d76, type: 3}
       propertyPath: m_Pivot.x
