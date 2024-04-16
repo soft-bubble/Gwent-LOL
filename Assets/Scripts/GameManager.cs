@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public Text nextround;
     //private Animator animnext;
 
-    public void WhoWon(){
+    public void DecideWinner(){
         /*First round*/
         if(Round == 1 && Hand1 == 0 && Hand2 == 0 && Pdraws1 && Edraws1) 
         {
