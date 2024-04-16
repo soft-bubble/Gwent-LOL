@@ -4,26 +4,27 @@ using UnityEngine;
 
 public class HandClass : MonoBehaviour
 {
-    private GameObject CardEntry;
-     public List<GameObject> CardsatFrange;
+     private GameObject CardEntry;
+     public List<GameObject> CardsatFringe;
      public int Cards = 0;
+     public int CardsSentBack = 0;
      public bool Surrender = false;
 
      private void OnCollisionEnter2D(Collision2D collision) // adds the cards to the list frange
      {
         CardEntry = collision.gameObject;
-        if (!CardsatFrange.Contains(CardEntry))
+        if (!CardsatFringe.Contains(CardEntry))
         {
-        CardsatFrange.Add(CardEntry);
+        CardsatFringe.Add(CardEntry);
         Cards ++;
         }
      }
 
     private void OnCollisionExit2D(Collision2D collision) // takes them out
      {
-        if (CardsatFrange.Contains(CardEntry))
+        if (CardsatFringe.Contains(CardEntry))
         {
-        CardsatFrange.RemoveAt(0);
+        CardsatFringe.RemoveAt(0);
         Cards --;
         }
      }

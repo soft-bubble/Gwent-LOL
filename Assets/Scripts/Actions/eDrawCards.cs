@@ -127,7 +127,7 @@ public class eDrawCards : MonoBehaviour
     }
     void Update()
     {
-        //Round = GameObject.Find("GameManager").GetComponent<GameManager>().Round;
+        Round = GameObject.Find("GameManager").GetComponent<GameManager>().Round;
         //Turn = GameObject.Find("TurnCounter").GetComponent<SetTurn>().Shift;
     }
 }
