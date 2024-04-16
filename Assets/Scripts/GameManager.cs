@@ -197,7 +197,7 @@ public class GameManager : MonoBehaviour
             //animnext.SetTrigger("shownext");
         }
 
-                    //tercera round
+                    //tercer round
         if(Round == 3 && Hand1 == 0 && Hand2 == 0 && Pdraws3 && Edraws3) // again
         {
             int ShurimaPts = int.Parse(ShurimaPoints);
@@ -268,13 +268,13 @@ public class GameManager : MonoBehaviour
         }
     }
   
-    void Update() //No se ha creado HandClass
+    void Update() 
     {
-        /*Hand1 = GameObject.Find("PlayerHand").GetComponent<HandClass>().Cartas;
-        Hand2 = GameObject.Find("EnemyHand").GetComponent<HandClass>().Cartas;
+        Hand1 = GameObject.Find("PlayerHand").GetComponent<HandClass>().Cards;
+        Hand2 = GameObject.Find("EnemyHand").GetComponent<HandClass>().Cards;
 
-        playerSurrender = GameObject.Find("PlayerHand").GetComponent<HandClass>().rendido;
-        enemySurrender = GameObject.Find("EnemyHand").GetComponent<HandClass>().rendido;*/
+        playerSurrender = GameObject.Find("PlayerHand").GetComponent<HandClass>().Surrender;
+        enemySurrender = GameObject.Find("EnemyHand").GetComponent<HandClass>().Surrender;
 
 
         ShurimaPoints = GameObject.Find("ContGutts").GetComponent<Text>().text;
