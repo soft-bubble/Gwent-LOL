@@ -270,10 +270,10 @@ public class PlayCards : MonoBehaviour
             }   
          }
        } 
-    }
+     }
    }
    public void pCheckRound()
-    {
+      {
         position = Random.Range(0, pDeck.Count);
         if(pDeck[position].GetComponent<CardClass>().AlreadyDrewIt == false)
         {
@@ -285,9 +285,9 @@ public class PlayCards : MonoBehaviour
         {
             pCheckRound();
         }
-    }
+      }
    public void eCheckRound() 
-    {
+      {
         position = Random.Range(0, eDeck.Count);
         if(eDeck[position].GetComponent<CardClass>().AlreadyDrewIt == false)
         {
@@ -299,7 +299,7 @@ public class PlayCards : MonoBehaviour
         {
             eCheckRound();
         }
-    }
+      }
 
 
    void Start()

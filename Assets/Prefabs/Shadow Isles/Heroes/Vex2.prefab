@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6940793989416374592}
   - component: {fileID: 4634541530290403914}
   - component: {fileID: -4845621395781494372}
+  - component: {fileID: 77276932131187946}
   m_Layer: 6
   m_Name: Vex2
   m_TagString: Untagged
@@ -149,8 +150,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -4845621395781494372}
-        m_TargetAssemblyTypeName: PlayCards, Assembly-CSharp
+      - m_Target: {fileID: 77276932131187946}
+        m_TargetAssemblyTypeName: AltPlayCards, Assembly-CSharp
         m_MethodName: PlayCardsMethod
         m_Mode: 1
         m_Arguments:
@@ -168,9 +169,39 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6386788918197086081}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7c2a3345b14f044095a1204b0407633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Card: {fileID: 6386788918197086081}
+  Turn: 1
+  playable: 1
+  GameOver: 0
+  EnemySurrender: 0
+  PlayerSurrender: 0
+  PFMelee: {fileID: 0}
+  PFRange: {fileID: 0}
+  PFSiege: {fileID: 0}
+  EFMelee: {fileID: 0}
+  EFRange: {fileID: 0}
+  EFSiege: {fileID: 0}
+  pClimateMelee: {fileID: 0}
+  pClimateRange: {fileID: 0}
+  pClimateSiege: {fileID: 0}
+  eClimateMelee: {fileID: 0}
+  eClimateRange: {fileID: 0}
+  eClimateSiege: {fileID: 0}
+--- !u!114 &77276932131187946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6386788918197086081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9224cd83252338446b1e72a9d0b06af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Card: {fileID: 6386788918197086081}
