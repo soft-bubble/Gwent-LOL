@@ -92,13 +92,13 @@ MonoBehaviour:
   Initial_Power: 0
   Altered_Power: 0
   Skill: 
-  Faction: 
+  Faction: Shadow Isles
   Medal: 
   Line: 
   NumericLine: 0
   GrowthAffected: 0
   ClimateAffected: 0
   SkillAffected: 0
-  AlreadyDrewIt: 0
+  AlreadyDrewIt: 1
   IsOnField: 0
   Added: 0

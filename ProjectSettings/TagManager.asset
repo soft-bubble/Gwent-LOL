@@ -14,6 +14,12 @@ TagManager:
   - EnemySiege
   - PlayerDeck
   - EnemyDeck
+  - pMeleeClimate
+  - pRangeClimate
+  - pSiegeClimate
+  - eMeleeClimate
+  - eRangeClimate
+  - eSiegeClimate
   layers:
   - Default
   - TransparentFX

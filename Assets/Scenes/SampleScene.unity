@@ -2577,6 +2577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: eRangeClimate
       objectReference: {fileID: 0}
+    - target: {fileID: 6979864336104774403, guid: c9db8e8b06d315a4c8ecc8441079d232, type: 3}
+      propertyPath: m_TagString
+      value: eRangeClimate
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2592,6 +2596,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2325850561525643270, guid: 2726cc04ffcd6c746a05a6b50db562e0, type: 3}
       propertyPath: m_Name
+      value: eSiegeClimate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325850561525643270, guid: 2726cc04ffcd6c746a05a6b50db562e0, type: 3}
+      propertyPath: m_TagString
       value: eSiegeClimate
       objectReference: {fileID: 0}
     - target: {fileID: 6842893262154302927, guid: 2726cc04ffcd6c746a05a6b50db562e0, type: 3}
@@ -2784,6 +2792,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6513502216700067705, guid: be1bd92fce75ca74cac6a40d2f5361fa, type: 3}
       propertyPath: m_Name
+      value: eMeleeClimate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6513502216700067705, guid: be1bd92fce75ca74cac6a40d2f5361fa, type: 3}
+      propertyPath: m_TagString
       value: eMeleeClimate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3114,6 +3126,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1216478213094013076, guid: 63c96fde0e5d48843a314a7eab735680, type: 3}
       propertyPath: m_Name
+      value: pRangeClimate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216478213094013076, guid: 63c96fde0e5d48843a314a7eab735680, type: 3}
+      propertyPath: m_TagString
       value: pRangeClimate
       objectReference: {fileID: 0}
     - target: {fileID: 6276414735781025196, guid: 63c96fde0e5d48843a314a7eab735680, type: 3}
@@ -4679,6 +4695,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pSiegeClimate
       objectReference: {fileID: 0}
+    - target: {fileID: 4509153733005011470, guid: 364fc8abc0f7102438c2a618fc9e6b43, type: 3}
+      propertyPath: m_TagString
+      value: pSiegeClimate
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4774,6 +4794,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8205218301045159314, guid: 0d0fd0aafb15ee947aa22d615c28380e, type: 3}
       propertyPath: m_Name
+      value: pMeleeClimate
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205218301045159314, guid: 0d0fd0aafb15ee947aa22d615c28380e, type: 3}
+      propertyPath: m_TagString
       value: pMeleeClimate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
