@@ -36,8 +36,8 @@ public class PlayCards : MonoBehaviour
 
    private bool PlayerChooses; //los jugadores eligieron sus cartas
     private bool EnemyChooses;
-   private int CompPlayerCards = 0; //para comprobar las cartas de cada jugador
-   private int CompEnemyCards = 0;
+   // private int CompPlayerCards = 0; //para comprobar las cartas de cada jugador
+   // private int CompEnemyCards = 0;
    private GameObject ShurimaHand; //player
    private GameObject ShadowIslesHand;  //enemy
 

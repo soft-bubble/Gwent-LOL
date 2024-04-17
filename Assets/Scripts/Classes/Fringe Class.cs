@@ -23,7 +23,7 @@ public class FringeClass : MonoBehaviour
     private FringeClass EMP;
     private FringeClass ERP;
     private FringeClass EAP;
-    private int CheckRound = 1;
+    // private int CheckRound = 1;
     private int Round = 1;
     private int Halfsum = 0;
 
@@ -53,6 +53,6 @@ public class FringeClass : MonoBehaviour
             Halfsum += CardsinFringe[i].GetComponent<CardClass>().Altered_Power;
         }
         Sum = Halfsum;
-        punctuationText.text = Sum.ToString();  
+    //punctuationText.text = Sum.ToString();  
     }
 }

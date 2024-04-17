@@ -593,6 +593,119 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350251317}
   m_CullTransparentMesh: 1
+--- !u!1 &499853213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 499853214}
+  - component: {fileID: 499853216}
+  - component: {fileID: 499853215}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &499853214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499853213}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -341, y: -24, z: 3.6324909}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 822533956}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &499853215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499853213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 499853216}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: DecideWinner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &499853216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499853213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543e9fb534a9d874aa4cec61ab663608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Round: 1
+  ShurimaWinsText: {fileID: 0}
+  ShurimaPoints: 
+  ShadowIslesWinsText: {fileID: 0}
+  ShadowIslesPoints: 
+  WinnerText: {fileID: 0}
+  playerSurrender: 0
+  enemySurrender: 0
+  GameOver: 0
+  Winner2nd: 0
+  Winner1st: 0
+  nextround: {fileID: 0}
 --- !u!1 &514391796
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,6 +993,7 @@ RectTransform:
   - {fileID: 7015868641416766459}
   - {fileID: 7164578055878551404}
   - {fileID: 8248697174407064137}
+  - {fileID: 499853214}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1303,6 +1417,10 @@ PrefabInstance:
       objectReference: {fileID: 2620992458847555637}
     - target: {fileID: 2798537096219756524, guid: a18e1a854bb7c444f87c27cfb77ebdcf, type: 3}
       propertyPath: m_Name
+      value: PlayerDeck
+      objectReference: {fileID: 0}
+    - target: {fileID: 2798537096219756524, guid: a18e1a854bb7c444f87c27cfb77ebdcf, type: 3}
+      propertyPath: m_TagString
       value: PlayerDeck
       objectReference: {fileID: 0}
     - target: {fileID: 3156456566050408150, guid: a18e1a854bb7c444f87c27cfb77ebdcf, type: 3}
@@ -2208,6 +2326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerHand
       objectReference: {fileID: 0}
+    - target: {fileID: 8256499510097957819, guid: cb51f0a50af0aa74a8c60eec35327982, type: 3}
+      propertyPath: m_TagString
+      value: PlayerHand
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2453,7 +2575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6979864336104774403, guid: c9db8e8b06d315a4c8ecc8441079d232, type: 3}
       propertyPath: m_Name
-      value: eDistanceClimage
+      value: eRangeClimate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2470,7 +2592,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2325850561525643270, guid: 2726cc04ffcd6c746a05a6b50db562e0, type: 3}
       propertyPath: m_Name
-      value: eSiegeClimage
+      value: eSiegeClimate
       objectReference: {fileID: 0}
     - target: {fileID: 6842893262154302927, guid: 2726cc04ffcd6c746a05a6b50db562e0, type: 3}
       propertyPath: m_Pivot.x
@@ -2662,7 +2784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6513502216700067705, guid: be1bd92fce75ca74cac6a40d2f5361fa, type: 3}
       propertyPath: m_Name
-      value: eMeleeClimage
+      value: eMeleeClimate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2970,6 +3092,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyHand
       objectReference: {fileID: 0}
+    - target: {fileID: 5847608695423334641, guid: 564545e56b9cd6a4dac9c16e95cd894a, type: 3}
+      propertyPath: m_TagString
+      value: EnemyHand
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2988,7 +3114,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1216478213094013076, guid: 63c96fde0e5d48843a314a7eab735680, type: 3}
       propertyPath: m_Name
-      value: pDistanceClimage
+      value: pRangeClimate
       objectReference: {fileID: 0}
     - target: {fileID: 6276414735781025196, guid: 63c96fde0e5d48843a314a7eab735680, type: 3}
       propertyPath: m_Pivot.x
@@ -3437,6 +3563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyMelee
       objectReference: {fileID: 0}
+    - target: {fileID: 7516682608049942472, guid: 0d15b0507510c9547a1269f16aa290c6, type: 3}
+      propertyPath: m_TagString
+      value: EnemyMelee
+      objectReference: {fileID: 0}
     - target: {fileID: 7951512082122305023, guid: 0d15b0507510c9547a1269f16aa290c6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3647,6 +3777,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerRange
       objectReference: {fileID: 0}
+    - target: {fileID: 6668463270733179372, guid: 03579684e806a1d4c9436efe625a8697, type: 3}
+      propertyPath: m_TagString
+      value: PlayerRange
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3675,6 +3809,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4964444507618402343, guid: e648f6879a5f29e429273127a0bc7c45, type: 3}
       propertyPath: m_Name
+      value: EnemyDeck
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964444507618402343, guid: e648f6879a5f29e429273127a0bc7c45, type: 3}
+      propertyPath: m_TagString
       value: EnemyDeck
       objectReference: {fileID: 0}
     - target: {fileID: 5355762646079906724, guid: e648f6879a5f29e429273127a0bc7c45, type: 3}
@@ -3922,6 +4060,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerMelee
       objectReference: {fileID: 0}
+    - target: {fileID: 934905894987350436, guid: 8bd2be0b7fad569448d93207a3a3c339, type: 3}
+      propertyPath: m_TagString
+      value: PlayerMelee
+      objectReference: {fileID: 0}
     - target: {fileID: 2067319507530350328, guid: 8bd2be0b7fad569448d93207a3a3c339, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4125,6 +4267,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySiege
       objectReference: {fileID: 0}
+    - target: {fileID: 731991994983567508, guid: 2cec8a00a2d72e8499782c2460dd3e17, type: 3}
+      propertyPath: m_TagString
+      value: EnemySiege
+      objectReference: {fileID: 0}
     - target: {fileID: 5337211087339144708, guid: 2cec8a00a2d72e8499782c2460dd3e17, type: 3}
       propertyPath: Fringe
       value: 3
@@ -4221,6 +4367,10 @@ PrefabInstance:
       objectReference: {fileID: 1447546774}
     - target: {fileID: 8319695944798740509, guid: 5efe641af6eb81a49bb6c697e8b94d76, type: 3}
       propertyPath: m_Name
+      value: EnemyRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319695944798740509, guid: 5efe641af6eb81a49bb6c697e8b94d76, type: 3}
+      propertyPath: m_TagString
       value: EnemyRange
       objectReference: {fileID: 0}
     - target: {fileID: 8401104977226657867, guid: 5efe641af6eb81a49bb6c697e8b94d76, type: 3}
@@ -4428,6 +4578,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerSiege
       objectReference: {fileID: 0}
+    - target: {fileID: 4473180457865353681, guid: 65b2064b08124e24688dcc91e83f1575, type: 3}
+      propertyPath: m_TagString
+      value: PlayerSiege
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4523,7 +4677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4509153733005011470, guid: 364fc8abc0f7102438c2a618fc9e6b43, type: 3}
       propertyPath: m_Name
-      value: pSiegeClimage
+      value: pSiegeClimate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4620,7 +4774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8205218301045159314, guid: 0d0fd0aafb15ee947aa22d615c28380e, type: 3}
       propertyPath: m_Name
-      value: pMeleeClimage
+      value: pMeleeClimate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

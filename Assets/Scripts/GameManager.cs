@@ -277,8 +277,8 @@ public class GameManager : MonoBehaviour
         enemySurrender = GameObject.Find("EnemyHand").GetComponent<HandClass>().Surrender;
 
 
-        ShurimaPoints = GameObject.Find("ContGutts").GetComponent<Text>().text;
-        ShadowIslesPoints = GameObject.Find("ContGriffith").GetComponent<Text>().text;
+        //ShurimaPoints = GameObject.Find("ContGutts").GetComponent<Text>().text;
+        //ShadowIslesPoints = GameObject.Find("ContGriffith").GetComponent<Text>().text;
 
         Edraws1 = GameObject.Find("EnemyDeck").GetComponent<eDrawCards>().firstdraw;
         Pdraws1 = GameObject.Find("PlayerDeck").GetComponent<pDrawCards>().firstdraw;
