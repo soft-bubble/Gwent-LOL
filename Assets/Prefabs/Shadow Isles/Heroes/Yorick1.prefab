@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4767163068848888531}
   - component: {fileID: -7824652541903569648}
   - component: {fileID: 6355221598697438532}
-  - component: {fileID: 8230908569812441343}
   - component: {fileID: -1927229991685393431}
   m_Layer: 6
   m_Name: Yorick1
@@ -161,36 +160,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8230908569812441343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786106423612313542}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7c2a3345b14f044095a1204b0407633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Card: {fileID: 786106423612313542}
-  Turn: 1
-  playable: 1
-  GameOver: 0
-  EnemySurrender: 0
-  PlayerSurrender: 0
-  PFMelee: {fileID: 0}
-  PFRange: {fileID: 0}
-  PFSiege: {fileID: 0}
-  EFMelee: {fileID: 0}
-  EFRange: {fileID: 0}
-  EFSiege: {fileID: 0}
-  pClimateMelee: {fileID: 0}
-  pClimateRange: {fileID: 0}
-  pClimateSiege: {fileID: 0}
-  eClimateMelee: {fileID: 0}
-  eClimateRange: {fileID: 0}
-  eClimateSiege: {fileID: 0}
 --- !u!114 &-1927229991685393431
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -41,6 +41,11 @@ public class eDrawCards : MonoBehaviour
     private int position = 0;
     public  List<GameObject> eDeck = new List<GameObject>();
 
+    public bool IsCardReturned(GameObject card)
+    {
+    return!card.GetComponent<CardClass>().AlreadyDrewIt;
+    }
+
     public void CheckCards() /*Method to shuffle the cards, it checks if it was already dealt and excludes them*/
     {
         bool cardDealt = false;
@@ -52,9 +57,9 @@ public class eDrawCards : MonoBehaviour
                 position = Random.Range(0, eDeck.Count);
                 if (position >= 0 && position < eDeck.Count)
                 {
-                    if (eDeck[position]!= null && eDeck[position].GetComponent<CardClass>().AlreadyDrewIt == false)
+                    if (eDeck[position]!= null && IsCardReturned(eDeck[position]) /*eDeck[position].GetComponent<CardClass>().AlreadyDrewIt == false*/)
                     {
-                        GameObject card = Instantiate(eDeck[position], new UnityEngine.Vector2(0,0), UnityEngine.Quaternion.identity);
+                        GameObject card = Instantiate(eDeck[position], new Vector2(0,0), Quaternion.identity);
                         card.transform.SetParent(EnemyHand.transform, false);
                         eDeck[position].GetComponent<CardClass>().AlreadyDrewIt = true;
                         cardDealt = true;

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 357227662844685236}
   - component: {fileID: 2880180716176838468}
   - component: {fileID: 681523078553066977}
-  - component: {fileID: -6850540503486295142}
   - component: {fileID: 8052082735138295171}
   m_Layer: 6
   m_Name: Karthus2
@@ -161,36 +160,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-6850540503486295142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9187494446576114268}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7c2a3345b14f044095a1204b0407633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Card: {fileID: 9187494446576114268}
-  Turn: 1
-  playable: 1
-  GameOver: 0
-  EnemySurrender: 0
-  PlayerSurrender: 0
-  PFMelee: {fileID: 0}
-  PFRange: {fileID: 0}
-  PFSiege: {fileID: 0}
-  EFMelee: {fileID: 0}
-  EFRange: {fileID: 0}
-  EFSiege: {fileID: 0}
-  pClimateMelee: {fileID: 0}
-  pClimateRange: {fileID: 0}
-  pClimateSiege: {fileID: 0}
-  eClimateMelee: {fileID: 0}
-  eClimateRange: {fileID: 0}
-  eClimateSiege: {fileID: 0}
 --- !u!114 &8052082735138295171
 MonoBehaviour:
   m_ObjectHideFlags: 0

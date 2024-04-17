@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2768670685757062815}
   - component: {fileID: -2708053183426608159}
   - component: {fileID: 1091416690146319415}
-  - component: {fileID: -7294475014540579303}
   - component: {fileID: 6683281732056062428}
   m_Layer: 6
   m_Name: Thresh1
@@ -162,36 +161,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-7294475014540579303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2627716771903228145}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7c2a3345b14f044095a1204b0407633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Card: {fileID: 2627716771903228145}
-  Turn: 1
-  playable: 1
-  GameOver: 0
-  EnemySurrender: 0
-  PlayerSurrender: 0
-  PFMelee: {fileID: 0}
-  PFRange: {fileID: 0}
-  PFSiege: {fileID: 0}
-  EFMelee: {fileID: 0}
-  EFRange: {fileID: 0}
-  EFSiege: {fileID: 0}
-  pClimateMelee: {fileID: 0}
-  pClimateRange: {fileID: 0}
-  pClimateSiege: {fileID: 0}
-  eClimateMelee: {fileID: 0}
-  eClimateRange: {fileID: 0}
-  eClimateSiege: {fileID: 0}
 --- !u!114 &6683281732056062428
 MonoBehaviour:
   m_ObjectHideFlags: 0
