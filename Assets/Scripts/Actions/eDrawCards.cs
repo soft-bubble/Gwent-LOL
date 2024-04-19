@@ -39,108 +39,93 @@ public class eDrawCards : MonoBehaviour
     public bool thirddraw = false; 
     public int Round = 1; 
     private int position = 0;
-    private int cardsDealt = 0;
     public  List<GameObject> eDeck = new List<GameObject>();
 
-    public bool IsCardReturned(GameObject card)
+ public void CheckCards()
+{
+    bool cardDealt = false;
+    int attempts = 0;
+
+    do
     {
-        if (card!= null && card.GetComponent<CardClass>()!= null)
+        if (eDeck.Count > 0)
         {
-            return card.GetComponent<CardClass>().AlreadyDrewIt;
+            position = Random.Range(0, eDeck.Count);
+            if (position >= 0 && position < eDeck.Count)
+            {
+                if (eDeck[position]!= null && eDeck[position].GetComponent<CardClass>().AlreadyDrewIt == false)
+                {
+                    GameObject card = Instantiate(eDeck[position], new UnityEngine.Vector2(0, 0), UnityEngine.Quaternion.identity);
+                    card.transform.SetParent(EnemyHand.transform, false);
+                    eDeck[position].GetComponent<CardClass>().AlreadyDrewIt = true;
+                    cardDealt = true;
+                    attempts = 0;
+                }
+            }
         }
         else
         {
-            return false;
-        }
-    }
-
-public bool CheckCards() /*Method to shuffle the cards, it checks if it was already dealt and excludes them*/
-{
-    bool cardDealt = false;
-    position = 0;
-
-    if (eDeck!= null && eDeck.Count > 0)
-    {
-        if (eDeck.Exists(card =>!card.GetComponent<CardClass>().AlreadyDrewIt))
-        {
-            do
-            {
-                cardDealt = false;
-                position = Random.Range(0, eDeck.Count);
-                if (position >= 0 && position < eDeck.Count)
-                {
-                    if (eDeck[position]!= null && !IsCardReturned(eDeck[position])) /* eDeck[position].GetComponent<CardClass>().AlreadyDrewIt == false*/
-                    {
-                        GameObject card = Instantiate(eDeck[position], new Vector2(0, 0), Quaternion.identity);
-                        card.transform.SetParent(EnemyHand.transform, false);
-                        eDeck[position].GetComponent<CardClass>().AlreadyDrewIt = true;
-                        eDeck.RemoveAt(position);
-                        cardDealt = true;
-                        cardsDealt++;
-                    }
-                }
-                position++;
-            } while (!cardDealt && eDeck.Exists(card =>!card.GetComponent<CardClass>().AlreadyDrewIt)  && eDeck.Count > 0);
-        }
-    }
-    return cardDealt;
-}
-
-    public void OnClick()
-    {
-        if (firstdraw == false)
-        {
-            DrawCards(10);
-            firstdraw = true;
-        }
-
-        if (seconddraw == false && Round == 2)
-        {
-            DrawCards(2);
-            seconddraw = true;
-        }
-
-        if (thirddraw == false && Round == 3)
-        {
-            DrawCards(2);
-            thirddraw = true;
-        }
-    }
-
-    public void DrawCards(int numberOfDraws) /*Method to call the CheckCards method*/
-    {
-        if (numberOfDraws <= 0)
-        {
-        return;
-        }
-        for (int i = 0; i < numberOfDraws; i++)
-        {
-            if (eDeck.Count > 0)
-            {
-                if (CheckCards())
-                {
-                }
-            }
-            else
-            {
             break;
+        }
+
+        // Check if all cards have been dealt
+        bool allCardsDealt = true;
+        foreach (GameObject card in eDeck)
+        {
+            if (!card.GetComponent<CardClass>().AlreadyDrewIt)
+            {
+                allCardsDealt = false;
+                break;
             }
-        }     
+        }
+
+        // If all cards have been dealt, break the loop
+        if (allCardsDealt && eDeck.Count == 27)
+        {
+            break;
+        }
+        attempts++; // Increment the attempts counter
+        if (attempts > 100) // Break the loop if too many attempts have been made without dealing a card
+        {
+            break;
+        }
+    } while (!cardDealt);
+}
+
+   public void OnClick()
+{
+    //  if (!Turn) return;
+
+    if (firstdraw == false)
+    {
+        DrawCards(10);
+        firstdraw = true;
     }
 
-    public void ResetCards()
-{
-    foreach (GameObject card in eDeck)
+    if (seconddraw == false && Round == 2)
     {
-        if (card!= null && card.GetComponent<CardClass>()!= null)
-        {
-            card.GetComponent<CardClass>().AlreadyDrewIt = false;
-        }
+        DrawCards(2);
+        seconddraw = true;
+    }
+
+    if (thirddraw == false && Round == 3)
+    {
+        DrawCards(2);
+        thirddraw = true;
     }
 }
+
+   public void DrawCards(int numberOfDraws)
+{
+    for (int i = 0; i < numberOfDraws; i++)
+    { 
+        if (eDeck.Count > 0)
+        CheckCards();
+    }
+}
+
     void Start() /*Makes sure the cards are into the list when the game starts*/
     {
-        ResetCards();
         eDeck.Add(Card1);
         eDeck.Add(Card2);
         eDeck.Add(Card3);
@@ -169,55 +154,9 @@ public bool CheckCards() /*Method to shuffle the cards, it checks if it was alre
         eDeck.Add(Card26);
         eDeck.Add(Card27);
     }
-
-    public void ResetDrawVariables()
+void Update()
     {
-    firstdraw = false;
-    seconddraw = false;
-    thirddraw = false;
-    }
-
-    void Update()
-    {
-        GameObject gameManager = GameObject.Find("GameManager");
-    if (gameManager!= null)
-    {
-        Round = gameManager.GetComponent<GameManager>().Round;
-        if (Round > 1)
-        {
-            ResetDrawVariables();
-        }
-    }
+        Round = GameObject.Find("GameManager").GetComponent<GameManager>().Round;
         //Turn = GameObject.Find("TurnCounter").GetComponent<SetTurn>().Shift;
-    }
+    }    
 }
-
-
-
-/*bool cardDealt = false;
-
-        do
-        {
-            cardDealt = false;
-            if ( eDeck != null && eDeck.Count > 0)
-            {
-                position = Random.Range(0, eDeck.Count);
-                if (position >= 0 && position < eDeck.Count)
-                {
-                    if (    eDeck[position]!= null && !IsCardReturned( eDeck[position]))
-                    {
-                        GameObject card = Instantiate(eDeck[position], new Vector2(0,0), Quaternion.identity);
-                        card.transform.SetParent(EnemyHand.transform, false);
-                        eDeck[position].GetComponent<CardClass>().AlreadyDrewIt = true;
-                        eDeck.RemoveAt(position);
-                        cardDealt = true;
-                        cardsDealt++;
-                    }
-                }
-            }
-            else
-            {
-                break;
-            }
-        } while (!cardDealt && eDeck.Exists(card =>!card.GetComponent<CardClass>().AlreadyDrewIt));
-     return cardDealt;*/

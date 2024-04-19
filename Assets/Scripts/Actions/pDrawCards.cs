@@ -126,6 +126,7 @@ public class pDrawCards : MonoBehaviour
   void Start()
 {
     pDeck.Add(Card1);
+    pDeck.Add(Card2);
     pDeck.Add(Card3);
     pDeck.Add(Card4);
     pDeck.Add(Card5);

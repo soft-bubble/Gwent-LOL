@@ -1412,6 +1412,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 822533956}
     m_Modifications:
     - target: {fileID: -6034025963124256691, guid: a18e1a854bb7c444f87c27cfb77ebdcf, type: 3}
+      propertyPath: Round
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6034025963124256691, guid: a18e1a854bb7c444f87c27cfb77ebdcf, type: 3}
       propertyPath: PlayerHand
       value: 
       objectReference: {fileID: 2620992458847555637}
