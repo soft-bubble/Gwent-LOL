@@ -41,9 +41,10 @@ public class pDrawCards : MonoBehaviour
     // private bool Turn;
     public List <GameObject> pDeck = new List<GameObject>();
 
-    public void CheckCards() 
+    public void CheckCards()
 {
     bool cardDealt = false;
+    int attempts = 0;
 
     do
     {
@@ -54,14 +55,38 @@ public class pDrawCards : MonoBehaviour
             {
                 if (pDeck[position]!= null && pDeck[position].GetComponent<CardClass>().AlreadyDrewIt == false)
                 {
-                    GameObject card = Instantiate(pDeck[position], new UnityEngine.Vector2(0,0), UnityEngine.Quaternion.identity);
+                    GameObject card = Instantiate(pDeck[position], new UnityEngine.Vector2(0, 0), UnityEngine.Quaternion.identity);
                     card.transform.SetParent(PlayerHand.transform, false);
                     pDeck[position].GetComponent<CardClass>().AlreadyDrewIt = true;
                     cardDealt = true;
+                    attempts = 0;
                 }
             }
         }
-        else{
+        else
+        {
+            break;
+        }
+
+        // Check if all cards have been dealt
+        bool allCardsDealt = true;
+        foreach (GameObject card in pDeck)
+        {
+            if (!card.GetComponent<CardClass>().AlreadyDrewIt)
+            {
+                allCardsDealt = false;
+                break;
+            }
+        }
+
+        // If all cards have been dealt, break the loop
+        if (allCardsDealt && pDeck.Count == 27)
+        {
+            break;
+        }
+        attempts++; // Increment the attempts counter
+        if (attempts > 100) // Break the loop if too many attempts have been made without dealing a card
+        {
             break;
         }
     } while (!cardDealt);

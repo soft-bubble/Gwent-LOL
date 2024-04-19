@@ -101,7 +101,7 @@ MonoBehaviour:
   GrowthAffected: 0
   ClimateAffected: 0
   SkillAffected: 0
-  AlreadyDrewIt: 1
+  AlreadyDrewIt: 0
   IsOnField: 0
   Added: 0
 --- !u!114 &4286053953999018598

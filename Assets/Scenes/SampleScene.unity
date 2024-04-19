@@ -2480,7 +2480,7 @@ MonoBehaviour:
   Card26: {fileID: 7043672927468805659, guid: e91e167729a62894a9807d735fef0499, type: 3}
   Card27: {fileID: 57879479966342097, guid: ce17009da1b9e9645b4744b9bf5684e4, type: 3}
   EnemyHand: {fileID: 27810652}
-  firstdraw: 0
+  firstdraw: 1
   seconddraw: 0
   thirddraw: 0
   Round: 1
@@ -3569,6 +3569,10 @@ PrefabInstance:
       objectReference: {fileID: 1082362256}
     - target: {fileID: 5315460850967928024, guid: 0d15b0507510c9547a1269f16aa290c6, type: 3}
       propertyPath: puntuationText
+      value: 
+      objectReference: {fileID: 257267420}
+    - target: {fileID: 5315460850967928024, guid: 0d15b0507510c9547a1269f16aa290c6, type: 3}
+      propertyPath: punctuationText
       value: 
       objectReference: {fileID: 257267420}
     - target: {fileID: 5315460850967928024, guid: 0d15b0507510c9547a1269f16aa290c6, type: 3}
