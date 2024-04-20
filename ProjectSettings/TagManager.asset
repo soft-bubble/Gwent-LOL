@@ -20,6 +20,7 @@ TagManager:
   - eMeleeClimate
   - eRangeClimate
   - eSiegeClimate
+  - Card
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6683281732056062428}
   m_Layer: 6
   m_Name: Thresh1
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8893089257763186591}
   m_Layer: 6
   m_Name: sGrowthPoison
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   GrowthAffected: 0
   ClimateAffected: 0
   SkillAffected: 0
-  AlreadyDrewIt: 1
+  AlreadyDrewIt: 0
   IsOnField: 0
   Added: 0
 --- !u!114 &-3295939609679774029

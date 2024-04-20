@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 3893856193753227838}
   - component: {fileID: 1991882376523502719}
   - component: {fileID: -2877008102152235550}
+  - component: {fileID: 651898156503986116}
+  - component: {fileID: -7383240069005686355}
   m_Layer: 6
   m_Name: Renekton
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,17 +90,103 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d99057cf30cf14bbbe74625b314835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Initial_Power: 0
+  Name: Renekton
+  Initial_Power: 5
   Altered_Power: 0
-  Skill: 
-  Faction: 
-  Medal: 
-  Line: 
-  NumericLine: 0
+  Skill: "Eliminar la carta con m\xE1s poder del campo. "
+  Faction: Shurima
+  Medal: Oro
+  Line: M
+  NumericLine: 1
   GrowthAffected: 0
   ClimateAffected: 0
   SkillAffected: 0
   AlreadyDrewIt: 0
   IsOnField: 0
   Added: 0
+--- !u!114 &651898156503986116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6754948737034089560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1991882376523502719}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -7383240069005686355}
+        m_TargetAssemblyTypeName: AltPlayCards, Assembly-CSharp
+        m_MethodName: PlayCardsMethod
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-7383240069005686355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6754948737034089560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9224cd83252338446b1e72a9d0b06af0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Card: {fileID: 6754948737034089560}
+  Turn: 1
+  playable: 1
+  GameOver: 0
+  EnemySurrender: 0
+  PlayerSurrender: 0
+  PFMelee: {fileID: 0}
+  PFRange: {fileID: 0}
+  PFSiege: {fileID: 0}
+  EFMelee: {fileID: 0}
+  EFRange: {fileID: 0}
+  EFSiege: {fileID: 0}
+  pClimateMelee: {fileID: 0}
+  pClimateRange: {fileID: 0}
+  pClimateSiege: {fileID: 0}
+  eClimateMelee: {fileID: 0}
+  eClimateRange: {fileID: 0}
+  eClimateSiege: {fileID: 0}
