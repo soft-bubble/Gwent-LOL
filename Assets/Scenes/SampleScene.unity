@@ -3908,6 +3908,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 855745601}
     - target: {fileID: 6229095491139053364, guid: 03579684e806a1d4c9436efe625a8697, type: 3}
+      propertyPath: punctuationText
+      value: 
+      objectReference: {fileID: 855745601}
+    - target: {fileID: 6229095491139053364, guid: 03579684e806a1d4c9436efe625a8697, type: 3}
       propertyPath: ShadowIslesGrave
       value: 
       objectReference: {fileID: 1447546774}
@@ -4215,6 +4219,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1582839223}
     - target: {fileID: -7095344082052690834, guid: 8bd2be0b7fad569448d93207a3a3c339, type: 3}
+      propertyPath: punctuationText
+      value: 
+      objectReference: {fileID: 1582839223}
+    - target: {fileID: -7095344082052690834, guid: 8bd2be0b7fad569448d93207a3a3c339, type: 3}
       propertyPath: ShadowIslesGrave
       value: 
       objectReference: {fileID: 1447546774}
@@ -4458,6 +4466,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2137914576}
     - target: {fileID: 5337211087339144708, guid: 2cec8a00a2d72e8499782c2460dd3e17, type: 3}
+      propertyPath: punctuationText
+      value: 
+      objectReference: {fileID: 2137914576}
+    - target: {fileID: 5337211087339144708, guid: 2cec8a00a2d72e8499782c2460dd3e17, type: 3}
       propertyPath: ShadowIslesGrave
       value: 
       objectReference: {fileID: 1447546774}
@@ -4569,6 +4581,10 @@ PrefabInstance:
       objectReference: {fileID: 1082362256}
     - target: {fileID: -3932935485326951788, guid: 5efe641af6eb81a49bb6c697e8b94d76, type: 3}
       propertyPath: puntuationText
+      value: 
+      objectReference: {fileID: 835447938}
+    - target: {fileID: -3932935485326951788, guid: 5efe641af6eb81a49bb6c697e8b94d76, type: 3}
+      propertyPath: punctuationText
       value: 
       objectReference: {fileID: 835447938}
     - target: {fileID: -3932935485326951788, guid: 5efe641af6eb81a49bb6c697e8b94d76, type: 3}
@@ -4698,6 +4714,10 @@ PrefabInstance:
       objectReference: {fileID: 1082362256}
     - target: {fileID: -1929048438190646450, guid: 65b2064b08124e24688dcc91e83f1575, type: 3}
       propertyPath: puntuationText
+      value: 
+      objectReference: {fileID: 2086029254}
+    - target: {fileID: -1929048438190646450, guid: 65b2064b08124e24688dcc91e83f1575, type: 3}
+      propertyPath: punctuationText
       value: 
       objectReference: {fileID: 2086029254}
     - target: {fileID: -1929048438190646450, guid: 65b2064b08124e24688dcc91e83f1575, type: 3}

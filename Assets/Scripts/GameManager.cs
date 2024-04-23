@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,242 +32,57 @@ public class GameManager : MonoBehaviour
     public Text nextround;
     //private Animator animnext;
 
-    public void DecideWinner(){
-        /*First round*/
-        if(Round == 1 && Hand1 == 0 && Hand2 == 0 && Pdraws1 && Edraws1) 
+    public void DecideWinner(){  
+{
+    int shurimaPoints = int.Parse(ShurimaPoints);
+    int shadowIslesPoints = int.Parse(ShadowIslesPoints);
+
+    bool shurimaVictory = false;
+    bool shadowIslesVictory = false;
+
+    for (int round = 1; round <= 3; round++)
+    {
+        bool playerHasNoCards = Hand1 == 0;
+        bool enemyHasNoCards = Hand2 == 0;
+        bool bothPlayersSurrendered = playerSurrender && enemySurrender;
+        bool playerDraws = Pdraws1 && Pdraws2 && Pdraws3;
+        bool enemyDraws = Edraws1 && Edraws2 && Edraws3;
+
+        if (playerHasNoCards && enemyHasNoCards && playerDraws && enemyDraws && bothPlayersSurrendered)
         {
-            int ShurimaPts = int.Parse(ShurimaPoints);
-            int ShadowIslesPts = int.Parse(ShadowIslesPoints);
+            shurimaVictory = shurimaPoints >= shadowIslesPoints;
+            shadowIslesVictory = shadowIslesPoints > shurimaPoints;
+            break;
+        }
 
-            if(ShurimaPts >= ShadowIslesPts)
-            {
-                ShurimaVictories += 1;
-                ShurimaWinsText.text = ShurimaVictories.ToString();
-                Winner1st = true;
-            }
-
-            if(ShadowIslesPts >= ShurimaPts)
-            {
-                ShadowIslesVictories += 1;
-                ShadowIslesWinsText.text = ShadowIslesVictories.ToString();
-                Winner1st = false;
-            }
-            Round += 1;
+        if (playerHasNoCards && enemyHasNoCards && playerDraws && enemyDraws)
+        {
+            shurimaVictory = shurimaPoints >= shadowIslesPoints;
+            shadowIslesVictory = shadowIslesPoints > shurimaPoints;
+            Round++;
             // animnext.SetTrigger("shownext");
-        }
-        if(Round == 1 && playerSurrender && enemySurrender && Pdraws1 && Edraws1)
-        {
-            int ShurimaPts = int.Parse(ShurimaPoints);
-            int ShadowIslesPts = int.Parse(ShadowIslesPoints);
-
-            if(ShurimaPts >= ShadowIslesPts)
-            {
-                ShurimaVictories += 1;
-                ShurimaWinsText.text = ShurimaVictories.ToString();
-                Winner1st = true;
-            }
-
-            if(ShadowIslesPts >= ShurimaPts)
-            {
-                ShadowIslesVictories += 1;
-                ShadowIslesWinsText.text = ShadowIslesVictories.ToString();
-                Winner1st = false;
-            }
-            Round += 1;
-            // animnext.SetTrigger("shownext");
-        }
-        if(Round == 1 && playerSurrender && Hand2 == 0 && Pdraws1 && Edraws1)  
-        {
-            int ShurimaPts = int.Parse(ShurimaPoints);
-            int ShadowIslesPts = int.Parse(ShadowIslesPoints);
-            if(ShurimaPts >= ShadowIslesPts)
-            {
-                ShurimaVictories += 1;
-                ShurimaWinsText.text = ShurimaVictories.ToString();
-                Winner1st = true;
-            }
-
-            if(ShadowIslesPts >= ShurimaPts)
-            {
-                ShadowIslesVictories += 1;
-                ShadowIslesWinsText.text = ShadowIslesVictories.ToString();
-                Winner1st = false;
-            }
-            Round += 1;
-            //animnext.SetTrigger("shownext");
-        }
-            if(Round == 1 && Hand1 == 0 && enemySurrender && Pdraws1 && Edraws1)  //gutts no tiene cartas y griffith se rindio
-        {
-            int ShurimaPts = int.Parse(ShurimaPoints);
-            int ShadowIslesPts = int.Parse(ShadowIslesPoints);
-            if(ShurimaPts >= ShadowIslesPts)
-            {
-                ShurimaVictories += 1;
-                ShurimaWinsText.text = ShurimaVictories.ToString();
-                Winner1st = true;
-            }
-
-            if(ShadowIslesPts >= ShurimaPts)
-            {
-                ShadowIslesVictories += 1;
-                ShadowIslesWinsText.text = ShadowIslesVictories.ToString();
-                Winner1st = false;
-            }
-            Round += 1;
-            //animnext.SetTrigger("shownext");
-        }
-        //segunda round
-        if(Round == 2 && Hand1 == 0 && Hand2 == 0 && Pdraws2 && Edraws2) //lo mismo
-        {
-            int ShurimaPts = int.Parse(ShurimaPoints);
-            int ShadowIslesPts = int.Parse(ShadowIslesPoints);
-            if(ShurimaPts >= ShadowIslesPts)
-            {
-                ShurimaVictories += 1;
-                ShurimaWinsText.text = ShurimaVictories.ToString();
-                Winner2nd = true;
-            }
-
-            if(ShadowIslesPts >= ShurimaPts)
-            {
-                ShadowIslesVictories += 1;
-                ShadowIslesWinsText.text = ShadowIslesVictories.ToString();
-                Winner2nd = false;
-            }
-            Round += 1;
-            //animnext.SetTrigger("shownext");
-        }
-        if(Round == 2 && playerSurrender && enemySurrender && Pdraws2 && Edraws2)
-        {
-            int ShurimaPts = int.Parse(ShurimaPoints);
-            int ShadowIslesPts = int.Parse(ShadowIslesPoints);
-            if(ShurimaPts >= ShadowIslesPts)
-            {
-                ShurimaVictories += 1;
-                ShurimaWinsText.text = ShurimaVictories.ToString();
-                Winner2nd = true;
-            }
-
-            if(ShadowIslesPts >= ShurimaPts)
-            {
-                ShadowIslesVictories += 1;
-                ShadowIslesWinsText.text = ShadowIslesVictories.ToString();
-                Winner2nd = false;
-            }
-            Round += 1;
-            // animnext.SetTrigger("shownext");
-        }
-        if(Round == 2 && playerSurrender && Hand2 == 0 && Pdraws2 && Edraws2)
-        {
-            int ShurimaPts = int.Parse(ShurimaPoints);
-            int ShadowIslesPts = int.Parse(ShadowIslesPoints);
-            if(ShurimaPts >= ShadowIslesPts)
-            {
-                ShurimaVictories += 1;
-                ShurimaWinsText.text = ShurimaVictories.ToString();
-                Winner2nd = true;
-            }
-
-            if(ShadowIslesPts >= ShurimaPts)
-            {
-                ShadowIslesVictories += 1;
-                ShadowIslesWinsText.text = ShadowIslesVictories.ToString();
-                Winner2nd = false;
-            }
-            Round += 1;
-            //animnext.SetTrigger("shownext");
-        }
-        if(Round == 2 && Hand1 == 0 && enemySurrender && Pdraws2 && Edraws2)
-        {
-            int ShurimaPts = int.Parse(ShurimaPoints);
-            int ShadowIslesPts = int.Parse(ShadowIslesPoints);
-            if(ShurimaPts >= ShadowIslesPts)
-            {
-                ShurimaVictories += 1;
-                ShurimaWinsText.text = ShurimaVictories.ToString();
-                Winner2nd = true;
-            }
-
-            if(ShadowIslesPts >= ShurimaPts)
-            {
-                ShadowIslesVictories += 1;
-                ShadowIslesWinsText.text = ShadowIslesVictories.ToString();
-                Winner2nd = false;
-            }
-            Round += 1;
-            //animnext.SetTrigger("shownext");
-        }
-
-                    //tercer round
-        if(Round == 3 && Hand1 == 0 && Hand2 == 0 && Pdraws3 && Edraws3) // again
-        {
-            int ShurimaPts = int.Parse(ShurimaPoints);
-            int ShadowIslesPts = int.Parse(ShadowIslesPoints);
-            if(ShurimaPts >= ShadowIslesPts)
-            {
-                ShurimaVictories += 1;
-                ShurimaWinsText.text = ShurimaVictories.ToString();
-            }
-
-            if(ShadowIslesPts >= ShurimaPts)
-            {
-                ShadowIslesVictories += 1;
-                ShadowIslesWinsText.text = ShadowIslesVictories.ToString();
-            }
-            Round = 0;
-        }
-         if(Round == 3 && playerSurrender && enemySurrender && Pdraws3 && Edraws3)
-        {
-            int ShurimaPts = int.Parse(ShurimaPoints);
-            int ShadowIslesPts = int.Parse(ShadowIslesPoints);
-            if(ShurimaPts >= ShadowIslesPts)
-            {
-                ShurimaVictories += 1;
-                ShurimaWinsText.text = ShurimaVictories.ToString();
-            }
-
-            if(ShadowIslesPts >= ShurimaPts)
-            {
-                ShadowIslesVictories += 1;
-                ShadowIslesWinsText.text = ShadowIslesVictories.ToString();
-            }
-            Round = 0;
-        }
-         if(Round == 3 && playerSurrender && Hand2 == 0 && Pdraws3 && Edraws3)
-        {
-            int ShurimaPts = int.Parse(ShurimaPoints);
-            int ShadowIslesPts = int.Parse(ShadowIslesPoints);
-            if(ShurimaPts >= ShadowIslesPts)
-            {
-                ShurimaVictories += 1;
-                ShurimaWinsText.text = ShurimaVictories.ToString();
-            }
-
-            if(ShadowIslesPts >= ShurimaPts)
-            {
-                ShadowIslesVictories += 1;
-                ShadowIslesWinsText.text = ShadowIslesVictories.ToString();
-            }
-            Round = 0;
-        }
-         if(Round == 3 && Hand1 == 0 && enemySurrender && Pdraws3 && Edraws3)
-        {
-            int ShurimaPts = int.Parse(ShurimaPoints);
-            int ShadowIslesPts = int.Parse(ShadowIslesPoints);
-            if(ShurimaPts >= ShadowIslesPts)
-            {
-                ShurimaVictories += 1;
-                ShurimaWinsText.text = ShurimaVictories.ToString();
-            }
-
-            if(ShadowIslesPts >= ShurimaPts)
-            {
-                ShadowIslesVictories += 1;
-                ShadowIslesWinsText.text = ShadowIslesVictories.ToString();
-            }
-            Round = 0;
+            break;
         }
     }
+
+    if (shurimaVictory)
+    {
+        ShurimaVictories++;
+        ShurimaWinsText.text = ShurimaVictories.ToString();
+    }
+
+    if (shadowIslesVictory)
+    {
+        ShadowIslesVictories++;
+        ShadowIslesWinsText.text = ShadowIslesVictories.ToString();
+    }
+
+    if (Round == 4)
+    {
+        Round = 0;
+    }
+}
+}
   
     void Update() 
     {
@@ -284,23 +100,18 @@ public class GameManager : MonoBehaviour
         Edraws3 = GameObject.Find("EnemyDeck").GetComponent<eDrawCards>().thirddraw;
         Pdraws3 = GameObject.Find("PlayerDeck").GetComponent<pDrawCards>().thirddraw;
 
-
-
                     //Decidiendo el ganador
         if(GameOver == false && ShurimaVictories == ShadowIslesVictories && ShadowIslesVictories == 2)
         {
             GameOver = true;
-            //SceneManager.LoadScene(9);
         }
         else if(GameOver == false && ShurimaVictories == 2)
         {
             GameOver = true;
-            //SceneManager.LoadScene(7);
         }
         else if(GameOver == false && ShadowIslesVictories == 2)
         {
             GameOver = true;
-            //SceneManager.LoadScene(8);
         }
     }
 }
